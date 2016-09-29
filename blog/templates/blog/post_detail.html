@@ -1,0 +1,95 @@
+
+{% extends 'blog/baselist.html' %}
+{% load staticfiles %}
+{% block content %}
+<section style="background-color:#fff;"id="services">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">Post Detail</h2>
+
+                <hr style="border-color:#333;" class="primary">
+                <h3>PostAuthor : {{post.author}}</h3>
+                <h3>PostTitle  : {{ post.title }}</h3>
+<a style="float:right;"class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}">edit <span class="glyphicon glyphicon-pencil"></span></a>
+<div class="confirm-delete"><a style="float:right;display:block;"class="btn btn-default"  href="{% url 'post_remove' pk=post.pk %}">delete <span class="glyphicon glyphicon-trash">  </span></span></a></div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<div style="
+    width: 100%;
+    min-width: 10%;
+    max-width: 1040px;
+    text-align: center;
+    font-size: 12px;
+    font-family: 돋움, Dotum, Helvetica, AppleGothic, sans-serif;
+    color: rgb(128, 128, 128);
+    margin: 0px auto;">
+
+
+        {% for image in post.image_set.all %}
+
+          <img style="
+    width: 700;
+    height: 500;
+
+    max-width: 100%;
+    max-height: 100%;"src="{{ image.picture.url }}" />
+
+    <br>
+    <br>
+
+        {% endfor %}
+
+
+
+        </div>
+        <div style="color:#222;    margin-top: 100;">
+
+
+          <!--
+<br><br>
+  {% if post.delete_date %}
+  댓글을 사용하실수 없는 게시물입니다.
+  {%else%}
+{% for comment in post.comments.all %}
+
+{% if user.is_authenticated or comment.approved_comment %}
+
+<div class="comment">
+<div class="date">
+    {{ comment.created_date }}
+    {% if not comment.approved_comment %}
+        <a class="btn btn-default" href="{% url 'comment_remove' pk=comment.pk %}"><span class="glyphicon glyphicon-remove"></span></a>
+        <a class="btn btn-default" href="{% url 'comment_approve' pk=comment.pk %}"><span class="glyphicon glyphicon-ok"></span></a>
+    {% endif %}
+    {%endif%}
+
+</div>
+<strong>{{ comment.author }}</strong>
+<p>{{ comment.text|linebreaks }}</p>
+</div>
+
+{% empty %}
+
+{% endfor %}
+{%endif%}
+</div>
+<a class="ong bab-default" href="{% url 'add_comment_to_post' pk=post.pk %}">
+<div class="postcom"><textarea cols="50"rows="4"style="overflow: hidden; min-height: 4em; height: 46px; width: 98%; margin-left: 3px;">
+    </textarea>
+</div>
+-->
+
+
+
+
+
+
+
+
+{% endblock %}
+git commit -m "Modified templates to display posts from database."

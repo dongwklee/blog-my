@@ -1,0 +1,135 @@
+{% extends 'blog/baselist.html' %}
+{% load staticfiles %}
+{% block content %}
+
+
+<!-- Page Content -->
+
+<section style="background-color:#fff;"id="services">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">
+Explore the various beds</h2>
+                <hr style="border-color:#333;" class="primary">
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<div style="background-color:#fff;" class="row">
+
+
+
+    <div class="col-md-12">
+
+        <div class="row carousel-holder">
+
+            <div class="col-md-12">
+                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="item active">
+
+                            <img class ="slide-image" src="{% static 'img/portfolio/thumbnails/1.jpg' %}" alt="">
+                        </div>
+                        <div class="item">
+                            <img class ="slide-image" src="{% static 'img/portfolio/thumbnails/2.jpg' %}" alt="">
+                        </div>
+                        <div class="item">
+                          <img class ="slide-image" src="{% static 'img/portfolio/thumbnails/3.jpg' %}" alt="">
+                        </div>
+                    </div>
+                    <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <section style="background-color:#fff;"id="services">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h2 class="section-heading">Post List</h2>
+                        <hr style="border-color:#333;" class="primary">
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        {% for post in posts %}
+        {%if post.none_date %}
+        <div class="row">
+
+            <div class="col-sm-4 col-lg-4 col-md-4">
+                <div class="thumbnail">
+
+
+                    <a href="{% url 'post_detail' pk=post.pk %}"><img style="height:125.33;width:342.33"class= "IMA"src="{{ post.image_set.first.picture.url }}" /></a>
+
+
+                    <div class="caption">
+                        <h4 class="pull-right"></h4>
+                        <h4><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a>
+                          <p class="pull-right">{{ post.comments.count }} reviews</p>
+                        </h4>
+                        <p> </p>
+                    </div>
+                    <div class="ratings">
+
+
+                    </div>
+                </div>
+            </div>
+
+            {%else%}
+
+<h1>작성된 게시물이 없습니다.<h1>
+
+        {%endif%}
+        {% endfor %}
+
+
+
+
+
+<!-- 포스트 리스트 하단 -->
+            <div class="col-sm-4 col-lg-4 col-md-4">
+                <h4><a href="#"></a>
+                </h4>
+                <div style="text-align: center;">
+                <p >
+The post is currently written up here.</p>
+<hr style="border-color:#000;">
+<div class="call-to-action">
+    <h2>If you want to add a new post, please press the button below</h2>
+    <a href="{% url 'post_new' %}"  class="btn btn-default btn-xl sr-button">NewPost</a>
+</div>
+</div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+<!-- /.container -->
+
+<div class="container">
+
+
+
+</div>
+<!-- /.container -->
+{%endblock%}

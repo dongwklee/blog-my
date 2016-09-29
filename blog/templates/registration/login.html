@@ -1,0 +1,43 @@
+{% extends "blog/baselist.html" %}
+
+{% block content %}
+<section style="background-color:#fff;"id="services">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">Login</h2>
+                <hr style="border-color:#333;" class="primary">
+            </div>
+        </div>
+    </div>
+
+</section>
+
+{% if form.errors %}
+<p>Your username and password didn't match. Please try again.</p>
+{% endif %}
+<div class="form-style-7">
+  <h1>환영합니다</h1>
+<form method="post" action="{% url 'login' %}">
+{% csrf_token %}
+<table>
+    <div class="form-style-7 input">
+<tr>
+    {{ form.username.label_tag }}
+
+    {{ form.username }}
+</tr>
+
+<tr>
+    {{ form.password.label_tag }}
+    {{ form.password }}
+</tr>
+</div>
+</table>
+
+<input type="submit" value="로그인">
+<input type="hidden" name="next" value="{{ next }}" >
+
+</form><a href="{% url 'signup' %}"><input type="submit" value="회원가입" /></a>
+</div>
+{% endblock %}

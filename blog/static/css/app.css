@@ -1,0 +1,295 @@
+
+.form-style-2{
+	margin: 0 30% 0 -10;
+	font: 95% Arial, Helvetica, sans-serif;
+	max-width: 100%;
+	margin: 10px auto;
+	padding: 7px;
+
+}
+textarea {
+    width: 100%;
+    height: 300px;
+    margin: 0;
+    font: inherit;
+    color: inherit;
+
+  }
+	.ban{
+	min-height: auto;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    background-position: center;
+    background-image: url(../img/lol.png);
+
+	}
+ label {
+    display: inline-block;
+    max-width: 100%;
+
+}
+
+.form-style-2 h1{
+
+	padding: 20px 0;
+	font-size: 140%;
+	font-weight: 700;
+	text-align: left;
+
+	margin: -7px -7px 1px -7px;
+}
+.form-style-2 input
+{
+  width: 100%;
+	-webkit-transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	-ms-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
+	outline: none;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+
+	background: #fff;
+	margin-bottom: 1%;
+	border: 1px solid #ccc;
+	padding: 3%;
+	color: #555;
+	font: 95% Arial, Helvetica, sans-serif;
+}
+.form-style-2 input
+{
+  color: #9a6333;
+  font-size: 30;
+	box-shadow: 0 0 5px #333;
+	padding: 3%;
+	border: 1px solid #f1f1f1;
+}
+
+.form-style-2 input[type="submit"],
+.form-style-2 input[type="button"]{
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	width: 100%;
+	padding: 3%;
+	background: #43D1AF;
+	border-bottom: 2px solid #30C29E;
+	border-top-style: none;
+	border-right-style: none;
+	border-left-style: none;
+	color: #fff;
+}
+.form-style-2 input[type="submit"]:hover,
+.form-style-2 input[type="button"]:hover{
+	background: #2EBC99;
+}
+.form-style-3{
+	font: 95% Arial, Helvetica, sans-serif;
+	max-width: 100%;
+	margin: 10px auto;
+	padding: 7px;
+
+}
+textarea {
+  box-shadow: 0 0 5px #333;
+    padding: 3%;
+    border: 1px solid #f1f1f1;
+    width: 100%;
+    margin: 0;
+    font: inherit;
+    color: inherit;
+
+  }
+ label {
+    display: inline-block;
+    max-width: 100%;
+
+}
+
+.form-style-3 h1{
+	background: #fff;
+	padding: 20px 0;
+	font-size: 140%;
+	font-weight: 700;
+	text-align: left;
+
+	margin: -7px -7px 1px -7px;
+}
+.form-style-3 input
+{
+
+	-webkit-transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	-ms-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
+	outline: none;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+
+
+	margin-bottom: 1%;
+	border: 1px solid #ccc;
+	padding: 3%;
+	color: #555;
+	font: 95% Arial, Helvetica, sans-serif;
+}
+.form-style-3 input
+{
+	box-shadow: 0 0 5px #333;
+	padding: 0%;
+	border: 1px solid #f1f1f1;
+}
+
+.form-style-3 input[type="submit"],
+.form-style-3 input[type="button"]{
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	width: 100%;
+	padding: 3%;
+	background: #43D1AF;
+	border-bottom: 2px solid #30C29E;
+	border-top-style: none;
+	border-right-style: none;
+	border-left-style: none;
+	color: #fff;
+}
+.form-style-3 input[type="submit"]:hover,
+.form-style-3 input[type="button"]:hover{
+	background: #2EBC99;
+}
+
+.form-style-6{
+	font: 95% Arial, Helvetica, sans-serif;
+	max-width: 400px;
+	margin: 10px auto;
+	padding: 16px;
+	background: #F7F7F7;
+}
+.form-style-6 h1{
+	background: #333;
+	padding: 20px 0;
+	font-size: 140%;
+	font-weight: 300;
+	text-align: center;
+	color: #fff;
+	margin: -16px -16px 16px -16px;
+}
+.form-style-6 input
+{
+	-webkit-transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	-ms-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
+	outline: none;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	width: 100%;
+	background: #fff;
+	margin-bottom: 4%;
+	border: 1px solid #ccc;
+	padding: 3%;
+	color: #555;
+	font: 95% Arial, Helvetica, sans-serif;
+}
+.form-style-6 input[type="text"]:focus,
+.form-style-6 input[type="date"]:focus,
+.form-style-6 input[type="datetime"]:focus,
+.form-style-6 input[type="email"]:focus,
+.form-style-6 input[type="number"]:focus,
+.form-style-6 input[type="search"]:focus,
+.form-style-6 input[type="time"]:focus,
+.form-style-6 input[type="url"]:focus,
+.form-style-6 textarea:focus,
+.form-style-6 select:focus
+{
+	box-shadow: 0 0 5px #43D1AF;
+	padding: 3%;
+	border: 1px solid #43D1AF;
+}
+
+.form-style-6 input[type="submit"],
+.form-style-6 input[type="button"]{
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	width: 100%;
+	padding: 3%;
+	background: #000;
+
+	border-top-style: none;
+	border-right-style: none;
+	border-left-style: none;
+	color: #fff;
+}
+.form-style-6 input[type="submit"]:hover,
+.form-style-6 input[type="button"]:hover{
+	background: #f1f1f1;
+	color:#000;
+}
+
+.form-style-7{
+	font: 95% Arial, Helvetica, sans-serif;
+	max-width: 400px;
+	margin: 10px auto;
+	padding: 16px;
+	background: #Fff;
+}
+.form-style-7 h1 {
+    background: #000000;
+    padding: 20px 0;
+    font-size: 140%;
+    font-weight: 300;
+    text-align: center;
+    color: #fff;
+    margin: -16px -16px 16px -16px;
+	}
+.form-style-7 input
+{
+	-webkit-transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	-ms-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
+	outline: none;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	width: 100%;
+	background: #fff;
+	margin-bottom: 4%;
+	border: 1px solid #ccc;
+	padding: 3%;
+	color: #555;
+	font: 95% Arial, Helvetica, sans-serif;
+}
+.form-style-7 input
+{
+	box-shadow: 0 0 5px #000;
+	padding: 3%;
+	border: 1px solid #fff;
+}
+
+.form-style-7 input[type="submit"],
+.form-style-7 input[type="button"]{
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	width: 100%;
+	padding: 3%;
+	background: #000;
+
+	border-top-style: none;
+	border-right-style: none;
+	border-left-style: none;
+	color: #fff;
+}
+.form-style-7 input[type="submit"]:hover,
+.form-style-7 input[type="button"]:hover{
+	background: #f1f1f1;
+	color:#000;
+}

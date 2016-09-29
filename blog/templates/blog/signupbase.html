@@ -1,0 +1,46 @@
+{% load staticfiles %}
+<html>
+    <head>
+        <title>Semon</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+
+    </head>
+ <body>
+<div >
+    {% if user.is_authenticated %}
+
+
+    <p class="topCome">wellcome semon {{ user.username }}<small>
+      (<a href="{% url 'logout' %}"><span class="logout">Log out</a>)<small>
+        <a href="{% url 'blog.views.home' %}" class="topComeicon"> <span class="glyphicon glyphicon-home">  </span></a>
+        <a href="{% url 'post_new' %}" class="topComeicon"> <span class="glyphicon glyphicon-plus">  </span></a>
+        <a href="{% url 'post_draft_list' %}" class="topComeicon"> <span class="glyphicon glyphicon-trash">  </span></a>
+      </small></p>
+    {% else %}
+    <p class="topNoCome">Login Please<small><a href="{% url 'login' %}" class="topnoComelock"><span class="glyphicon glyphicon-lock"></span></a>
+      <a href="{%url 'signup'%}" class="topnoComeicon"><span class="glyphicon glyphicon-edit"></span></span></a>
+      <a href="{% url 'blog.views.home' %}" class="topnoComeicon"><sapn class="glyphicon glyphicon-home"></span></a></small>
+        </p>
+    {% endif %}
+<div class=mainbn>
+  <img src="/static/main.gif" width="100%" height="300" title="">
+</div>
+<div class="tl_srch clear">	<h1 class="ngeb clear">
+  <i class="bg_color"></i><a href="{% url 'blog.views.post_list' %}" class="topbnCome"><sapn class="glyphicon glyphicon-tag"></span></a>회원가입</h1>
+  <span class="polist"></span>						</div>
+    <div class="potitlecopy"></div>
+        <div class="mainpotitle">
+            <div class="potitlesecen">
+            {% block content %}
+            {% endblock %}
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
